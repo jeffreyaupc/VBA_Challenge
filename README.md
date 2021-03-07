@@ -9,22 +9,29 @@ The Module 2 solution code uses nested for loops to collect data by first loopin
 
 ### Original Code
 The image below shows the original code:
-![Original Code for Stock Analysis](Other_Screenshots\Stock_Analysis_Original_Code.PNG)
+![Original Code for Stock Analysis](Other_Screenshots/Stock_Analysis_Original_Code.PNG)
 
 After initializing an array of all the tickers, starting price and ending price were initiated as well. The number of rows are then determined with the code under 3c). The first for loop loops through the tickers one by one. Inside the first for loop, another for loop loops through the rows to find information that matches the current ticker, and outputs the data for the current ticker.
 
 ### Refactored Code
 Each step of the refactored code are explained with images below
 The image below shows the refactored code:
-![Refactored Code for Stock Analysis](Other_Screenshots\Stock_Analysis_Refactored_Code.PNG)
+![Refactored Code for Stock Analysis](Other_Screenshots/Stock_Analysis_Refactored_Code.PNG)
 
 After initializing an array of all the tickers, the number of rows to loop over are determined just as in the original code. A ticker index is then created in 1a) and set as equals to 0 for future use. Three output arrays are created in 1b): tickerVolumes(12), tickerStartingPrices(12), and tickerEndingPrices(12), each with 12 elements (0 to 11) in each with different data types that are suitable.
+
 ![Steps 1a and 1b](Other_Screenshots/1a_and_1b.PNG)
 
 A for loop is then created to initialize the tickerVolumes to 0. After the for loop, the tickerIndex would end up equals to 12, therefore it is then set to 0 again before we start to loop over all the rows in the spreadsheet.
 ![Steps 2a](Other_Screenshots/2a.PNG)
 
-A for loop is then created to loop over the whole dataset, from the second row where the dataset begins to the last row of the dataset. Inside the for loop, since the tickerIndex is equals to 0, the code in 3a) increases the volume for tickerVolumes(0), which adds all the daily volumes that matches with the tickerIndex(0). The code in 3b) finds the first row of the current ticker and stores its price as in tickerStartingPrices(0). The code in 3c) stores the price of the row as tickerEndingPrices(0) when it reaches the last row of the ticker with tickerIndex = 0. After that, in 3d) the tickerIndex is added by 1 so from the next row on, storing the data in tickerVolumes(1), tickerStartingPrices(1), and tickerEndingPrices(1), and the process is repeated until data for tickerIndex = 11 is collected.
+A for loop is then created to loop over the whole dataset, from the second row where the dataset begins to the last row of the dataset. Inside the for loop, since the tickerIndex is equals to 0, the code in 3a) increases the volume for tickerVolumes(0), which adds all the daily volumes that matches with the tickerIndex(0). 
+
+The code in 3b) finds the first row of the current ticker and stores its price as in tickerStartingPrices(0). 
+
+The code in 3c) stores the price of the row as tickerEndingPrices(0) when it reaches the last row of the ticker with tickerIndex = 0. 
+
+After that, in 3d) the tickerIndex is added by 1 so from the next row on, storing the data in tickerVolumes(1), tickerStartingPrices(1), and tickerEndingPrices(1), and the process is repeated until data for tickerIndex = 11 is collected.
 ![Steps 2b to 3d](Other_Screenshots/2b_to_3d.PNG)
 
 All the data is stored inside three output arrays, and they can be accessed with tickerIndex that matches with the tickers. Therefore, a for loop is created to access the tickers(12) array, the Total Daily Volume from tickerVolumes(12) array, and Return (by dividing tickerEndingPrices(12) by tickerStartingPrices(12), then minus 1) using tickerIndex.
@@ -45,6 +52,7 @@ In 2018, only ENPH and RUN have positive returns, while the rest have negative r
 
 ### Execution times of the original script and the refactored script
 For the original script, it took 0.96875 seconds for the year 2017 to execute while it took 0.9375 seconds for the year 2018 to execute.
+
 ![Execution Times for Original Script 2017](Other_Screenshots/All_Stocks_Analysis_2017.PNG)
 ![Execution Times for Original Script 2017](Other_Screenshots/All_Stocks_Analysis_2018.PNG)
 
