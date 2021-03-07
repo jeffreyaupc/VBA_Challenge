@@ -31,7 +31,7 @@ The code in 3b) finds the first row of the current ticker and stores its price a
 
 The code in 3c) stores the price of the row as tickerEndingPrices(0) when it reaches the last row of the ticker with tickerIndex = 0. 
 
-After that, in 3d) the tickerIndex is added by 1 so from the next row on, storing the data in tickerVolumes(1), tickerStartingPrices(1), and tickerEndingPrices(1), and the process is repeated until data for tickerIndex = 11 is collected.
+After that, in 3d) the tickerIndex is added by 1 so from the next row on, data is stored in tickerVolumes(1), tickerStartingPrices(1), and tickerEndingPrices(1), and the process is repeated until data for tickerIndex = 11 is collected.
 ![Steps 2b to 3d](Other_Screenshots/2b_to_3d.PNG)
 
 All the data is stored inside three output arrays, and they can be accessed with tickerIndex that matches with the tickers. Therefore, a for loop is created to access the tickers(12) array, the Total Daily Volume from tickerVolumes(12) array, and Return (by dividing tickerEndingPrices(12) by tickerStartingPrices(12), then minus 1) using tickerIndex.
