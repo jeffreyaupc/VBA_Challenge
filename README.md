@@ -58,7 +58,7 @@ For the original script, it took 0.96875 seconds for the year 2017 to execute wh
 
 For the refactored script, it took 0.1484375 seconds for both 2017 and 2018 to execute
 ![Execution Times for Refactored Script 2017](Resources/VBA_Challenge_2017.PNG)
-![Execution Times for Refactored Script 2017](Resources/VBA_Challenge_2017.PNG)
+![Execution Times for Refactored Script 2017](Resources/VBA_Challenge_2018.PNG)
 
 As a result of refactoring the script, the stock analysis now run 6 times faster!
 
